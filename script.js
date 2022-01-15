@@ -28,7 +28,7 @@ async function buscaCep() {
 
   const inputCep = document.querySelector("input[name=cep]");
   let cep = inputCep.value.replace("-", "");
-  let url = "http://viacep.com.br/ws/" + cep + "/json";
+  let url = "https://viacep.com.br/ws/" + cep + "/json";
 
   let xhr = new XMLHttpRequest();
 
