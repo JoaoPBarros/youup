@@ -1,8 +1,8 @@
 function preencheCampos(json) {
-  document.querySelector('input[name=logradouro]').value = json.logradouro;
+  document.querySelector('input[name=estado]').value = json.uf;
   document.querySelector('input[name=bairro]').value = json.bairro;
   document.querySelector('input[name=cidade]').value = json.localidade;
-  document.querySelector('input[name=estado]').value = json.uf;
+  document.querySelector('input[name=logradouro]').value = json.logradouro;
 }
 
 function capturardadosparaConclusao() {
