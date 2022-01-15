@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You-up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/index/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./assets/unnamed 1.svg" alt="Anitta">
+      <p class="subtitle-img">@anitta</p>
+    </div>
+    <div>
+      <img class="plus" src="./assets/+.svg" alt="">
+    </div>
+    <div>
+      <img src="./assets/Frame 4.svg" alt="logo You-up">
+      <p class="subtitle-img">@YouUp</p>
+    </div>
+  </header>
+  <main>
+    <h1>Endereço completo:</h1>
+    <form action="" method="get">
+      <label for="cep" class="cep">
+        <p>Cep</p>
+        <input type="text" name="cep" onchange="buscaCep()" placeholder="00000-170">
+        <div class="cep-invalido invisible">
+          <p>Cep inválido</p>
+        </div>
+      </label>
+      <label for="estado">
+        <p>Estado</p>
+        <input type="text" name="estado" placeholder="SP">
+      </label>
+      <label for="cidade">
+        <p>Cidade</p>
+        <input type="text" name="cidade" placeholder="São Paulo">
+      </label>
+      <label for="bairro">
+        <p>Bairro</p>
+        <input type="text" name="bairro" placeholder="Sé">
+      </label>
+      <label for="logradouro">
+        <p>Logradouro</p>
+        <input type="text" name="logradouro" placeholder="Praça da Sé">
+      </label>
+    </form>
+  </main>
+  <footer>
+    <button type="submit" onclick="capturardadosparaConclusao()">
+
+      AVANÇAR
+    </button>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>

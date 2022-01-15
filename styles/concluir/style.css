@@ -1,0 +1,89 @@
+
+/* componente superior */
+
+body {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  margin: 2rem 0 0 0;
+  width: 20rem;
+  /* height: 12.58rem; */
+}
+
+img {
+  width: 8.03rem;
+}
+
+img.plus {
+  width: 3.01rem;
+  height: 8.14rem;
+  transform: scale(.7);
+  padding: 0 0 2rem 0;
+}
+
+p.subtitle-img {
+  margin: 1rem 0 0 0;
+}
+
+/* componente formulário */
+
+h1 {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+p.data {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: .25rem 1rem .25rem 0;
+}
+
+section > div {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2.5rem;
+}
+
+
+/* componentes footer */
+
+a {
+  width: 24.37rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  padding: .5rem 0 0 0;
+  color: var(--shape);
+  margin: 3rem 0 0 0;
+  position: fixed;
+  bottom: 3rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* exceções */
+
+@media(min-width: 576px) {
+
+  body {
+    transform: scale(.9);
+  }
+}
+
+@media(min-width: 1200px) {
+
+  header {
+    margin: .5rem 0;
+  }
+
+  body {
+    transform: scale(.7);
+  }
+}
