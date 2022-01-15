@@ -24,7 +24,7 @@ function loadados() {
   document.querySelector('.estado').innerHTML     = estado;
 }
 
-function buscaCep() {
+async function buscaCep() {
 
   const inputCep = document.querySelector("input[name=cep]");
   let cep = inputCep.value.replace("-", "");
@@ -35,11 +35,11 @@ function buscaCep() {
   xhr.open("GET", url, true);
   xhr.responseType="text";
 
-  document.querySelector("input[name=cep]").classList.add("cep-invalido");
-  document.querySelector("div.cep-invalido").classList.remove("invisible");
-  xhr.onreadystatechange = function () {
+  xhr.onreadystatechange = async function () {
 
     if (xhr.readyState == 4) {
+      document.querySelector("input[name=cep]").classList.add("cep-invalido");
+      document.querySelector("div.cep-invalido").classList.remove("invisible");
       if ((xhr.status == 200)) {
         document.querySelector("input[name=cep]").classList.remove("cep-invalido");
         document.querySelector(".cep-invalido").classList.add("invisible");
@@ -47,8 +47,6 @@ function buscaCep() {
         preencheCampos(JSON.parse(xhr.responseText));
       }
     }
-
-
   };
   xhr.send();
 
